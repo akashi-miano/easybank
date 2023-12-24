@@ -10,8 +10,11 @@ const updateClasses = () => {
     footerNav.classList.add("flow-content--m");
     footerSocialWrapper.classList.add("flow-content--m");
     footerList.classList.add("flow-content--m");
-    mobileHeroImage.style = "display: none";
   }
+};
+
+const removeHeroImg = () => {
+  if (window.innerWidth <= 1200) mobileHeroImage.style = "display: none";
 };
 
 mobileToggle.addEventListener("click", () => {
@@ -24,4 +27,5 @@ mobileToggle.addEventListener("click", () => {
     mobileNav.classList.remove("flex");
   }
 });
+removeHeroImg();
 updateClasses();
